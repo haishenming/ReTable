@@ -1,4 +1,3 @@
-
 """
 修改mysql表
 """
@@ -9,23 +8,24 @@ import pymysql
 from pymysql.err import ProgrammingError
 
 DB_CONFIG = {
-    'host': '101.201.68.4',                           # 数据库地址
-    'port': 3306,                                     # 数据库端口
-    'user': 'root',                                   # 用户名
-    'password': 'haishenming123',                     # 密码
-    'database': 'jc_backstage2',                                 # 数据库
+    'host': '101.201.68.4',  # 数据库地址
+    'port': 3306,  # 数据库端口
+    'user': 'root',  # 用户名
+    'password': 'haishenming123',  # 密码
+    'database': 'jc_backstage2',  # 数据库
     'table_name': 'teaching_train',
-    }
+}
+
 
 class Table:
     def __init__(self, host, port, user, password, database, table_name, charset='utf8'):
-        self.host = host              # 数据库地址
-        self.port = port              # 数据库端口
-        self.user = user              # 数据库用户名
-        self.password = password      # 密码
-        self.database = database      # 数据库名
-        self.table = table_name       # 表名
-        self.charset = charset        # 字符集
+        self.host = host  # 数据库地址
+        self.port = port  # 数据库端口
+        self.user = user  # 数据库用户名
+        self.password = password  # 密码
+        self.database = database  # 数据库名
+        self.table = table_name  # 表名
+        self.charset = charset  # 字符集
         self.conn = pymysql.connect(  # 数据库连接
             host=self.host,
             port=self.port,
@@ -35,8 +35,8 @@ class Table:
             charset=self.charset
         )
         self.cursor = self.conn.cursor(cursor=pymysql.cursors.DictCursor)  # 数据库游标
-        self.table_info = {}           # 要修改的数据配置
-        self.error_msg = {             # 错误信息提示
+        self.table_info = {}  # 要修改的数据配置
+        self.error_msg = {  # 错误信息提示
             '0': "操作成功！",
             '100': "sql语句执行错误：{}",
             '200': "缺少关键数据: {}"
@@ -110,11 +110,11 @@ class Table:
                         not_null = ' NOT NULL'
                     else:
                         not_null = None
-                    sql = "ALTER TABLE {table_name} CHANGE {old_name} {new_name} {type}".\
-                            format(table_name=self.table,
-                                   old_name=old_field_name,
-                                   new_name=field_info['Field'],
-                                   type=field_info["Type"],)
+                    sql = "ALTER TABLE {table_name} CHANGE {old_name} {new_name} {type}". \
+                        format(table_name=self.table,
+                               old_name=old_field_name,
+                               new_name=field_info['Field'],
+                               type=field_info["Type"], )
                     if not_null:
                         sql += not_null
                     if field_info["Default"]:
@@ -173,10 +173,10 @@ class Table:
                         not_null = ' NOT NULL'
                     else:
                         not_null = None
-                    sql = "ALTER TABLE {table_name} ADD {new_name} {type}".\
-                            format(table_name=self.table,
-                                   new_name=field_name,
-                                   type=field_info["Type"],)
+                    sql = "ALTER TABLE {table_name} ADD {new_name} {type}". \
+                        format(table_name=self.table,
+                               new_name=field_name,
+                               type=field_info["Type"], )
                     if not_null:
                         sql += not_null
                     if field_info["Default"]:
