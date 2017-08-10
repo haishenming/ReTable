@@ -2,7 +2,7 @@
     "table_field": {
         "new_field": {
             "Type": "varchar(36)",
-            "Comment": "新添加的字段",
+            "Comment": "123",
             "Null": "NO",
             "Default": "哈哈哈",
             "Field": "new_field"
