@@ -1,0 +1,201 @@
+{
+    "table_field": {
+        "new_field": {
+            "Type": "varchar(36)",
+            "Comment": "新添加的字段",
+            "Null": "NO",
+            "Default": "哈哈哈",
+            "Field": "new_field"
+        },
+        "parameters": {
+            "Type": "text",
+            "Comment": "练习参数",
+            "Null": "YES",
+            "Default": null,
+            "Field": "parameters"
+        },
+        "resource_size": {
+            "Type": "int(11)",
+            "Comment": "需要下载资源的总大小",
+            "Null": "YES",
+            "Default": "0",
+            "Field": "resource_size"
+        },
+        "deleted": {
+            "Type": "datetime",
+            "Comment": "删除时间",
+            "Null": "YES",
+            "Default": null,
+            "Field": "deleted"
+        },
+        "step": {
+            "Type": "text",
+            "Comment": "练习步骤",
+            "Null": "YES",
+            "Default": null,
+            "Field": "step"
+        },
+        "name": {
+            "Type": "varchar(40)",
+            "Comment": "名称",
+            "Null": "NO",
+            "Default": "leo",
+            "Field": "name"
+        },
+        "user_id": {
+            "Type": "int(11)",
+            "Comment": "创建人ID",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "user_id"
+        },
+        "difficulty": {
+            "Type": "varchar(50)",
+            "Comment": "课程难度",
+            "Null": "YES",
+            "Default": "",
+            "Field": "difficulty"
+        },
+        "strength": {
+            "Type": "varchar(50)",
+            "Comment": "练习强度",
+            "Null": "YES",
+            "Default": "",
+            "Field": "strength"
+        },
+        "is_sync": {
+            "Type": "int(1)",
+            "Comment": "是否已提交（同步到其他环境），0：未提交 1：已提交",
+            "Null": "YES",
+            "Default": "0",
+            "Field": "is_sync"
+        },
+        "level": {
+            "Type": "int(1)",
+            "Comment": "难度等级（标签） 0:入门， 1:进阶 2:高阶",
+            "Null": "YES",
+            "Default": "2",
+            "Field": "level"
+        },
+        "status": {
+            "Type": "tinyint(4)",
+            "Comment": "练习状态，0在库，1上线，2审核，3删除",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "status"
+        },
+        "correlation_lesson": {
+            "Type": "varchar(30)",
+            "Comment": "",
+            "Null": "YES",
+            "Default": "[]",
+            "Field": "correlation_lesson"
+        },
+        "prologue_audio": {
+            "Type": "varchar(40)",
+            "Comment": "开场白音频文件",
+            "Null": "YES",
+            "Default": "",
+            "Field": "prologue_audio"
+        },
+        "resource_count": {
+            "Type": "int(11)",
+            "Comment": "需要下载资源数量，只算音频和视频",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "resource_count"
+        },
+        "created": {
+            "Type": "datetime",
+            "Comment": "创建时间",
+            "Null": "NO",
+            "Default": null,
+            "Field": "created"
+        },
+        "point_video": {
+            "Type": "text",
+            "Comment": "要点视频",
+            "Null": "YES",
+            "Default": null,
+            "Field": "point_video"
+        },
+        "updated": {
+            "Type": "datetime",
+            "Comment": "修改时间",
+            "Null": "YES",
+            "Default": null,
+            "Field": "updated"
+        },
+        "target": {
+            "Type": "varchar(200)",
+            "Comment": "课程目的",
+            "Null": "NO",
+            "Default": "jfkldsjflkaj",
+            "Field": "target"
+        },
+        "train_id": {
+            "Type": "int(11)",
+            "Comment": "练习id",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "train_id"
+        },
+        "update_user_id": {
+            "Type": "int(11)",
+            "Comment": "修改人ID",
+            "Null": "YES",
+            "Default": "0",
+            "Field": "update_user_id"
+        },
+        "prologue_picture": {
+            "Type": "varchar(40)",
+            "Comment": "开场白配图",
+            "Null": "YES",
+            "Default": "",
+            "Field": "prologue_picture"
+        },
+        "applicable": {
+            "Type": "varchar(100)",
+            "Comment": "适用人群",
+            "Null": "YES",
+            "Default": "",
+            "Field": "applicable"
+        },
+        "tag": {
+            "Type": "varchar(100)",
+            "Comment": "练习标签: json格式  [string, string]",
+            "Null": "YES",
+            "Default": "[]",
+            "Field": "tag"
+        },
+        "prologue_video": {
+            "Type": "varchar(40)",
+            "Comment": "开场白视频文件",
+            "Null": "NO",
+            "Default": "",
+            "Field": "prologue_video"
+        },
+        "duration": {
+            "Type": "varchar(50)",
+            "Comment": "建议学习周期",
+            "Null": "YES",
+            "Default": "",
+            "Field": "duration"
+        },
+        "index": {
+            "Type": "int(11)",
+            "Comment": "显示顺序，从小到大",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "index"
+        },
+        "type": {
+            "Type": "int(11)",
+            "Comment": "练习类型，0气息，1音准，2技巧",
+            "Null": "NO",
+            "Default": "0",
+            "Field": "type"
+        }
+    },
+    "table_name": "teaching_train"
+}
