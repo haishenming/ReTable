@@ -37,7 +37,7 @@ class Table:
     def get_table_fields(self):
         """获取表的字段信息
         """
-        self.cursor.execute("show full columns from {};".format(self.table))
+        self.cursor.execute("show full columns from %s", (self.table, ))
         table_fields = self.cursor.fetchall()
         self.conn.commit()
 
@@ -93,7 +93,6 @@ class Table:
         for field, v in self.old_table_info_dict["table_field"].items():
             if field == field_name:
                 return v
-
         return None
 
     def change_field_name(self):
@@ -238,4 +237,4 @@ class Table:
                         err_field_name_list.append((field_name, e))
             self.clean_file()
         return self.error_msg['0'].format("\n删除以下字段:{},\n以下字段删除失败:{},\n以下字段未找到:{}。\n"
-                                        .format(success_field_name, err_field_name_list, miss_fields_name_list))
+                                          .format(success_field_name, err_field_name_list, miss_fields_name_list))
