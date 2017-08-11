@@ -6,7 +6,6 @@ import json
 
 import pymysql
 from pymysql.err import ProgrammingError
-from config import DB_CONFIG
 
 
 class Table:
