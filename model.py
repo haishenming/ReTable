@@ -111,9 +111,12 @@ class Table:
             old_field_name = old_field_name
             new_field_info = new_field_info
             field_info = self.get_field(old_field_name)
+            if field_info == new_field_info:
+                # 检查是够有修改
+                continue
             if field_info:
-                field_info.update(new_field_info)
                 # 检查字段是否存在
+                field_info.update(new_field_info)
                 try:
                     if field_info["Null"] == "NO":
                         not_null = ' NOT NULL'
@@ -183,7 +186,7 @@ class Table:
                     field_name_is_new = False
             if field_name_is_new:
                 try:
-                    if field_info["Null"] == "NO":
+                    if field_info.get("Null") == "NO":
                         not_null = ' NOT NULL'
                     else:
                         not_null = None
@@ -193,15 +196,17 @@ class Table:
                                type=field_info["Type"], )
                     if not_null:
                         sql += not_null
-                    if field_info["Default"]:
+                    if field_info.get("Default"):
                         sql += " DEFAULT " + r"'" + field_info["Default"] + r"'"
                     else:
                         if field_info["Type"].startswith("int"):
                             sql += " DEFAULT '0' "
                         if field_info["Type"].startswith("varchar"):
                             sql += " DEFAULT \"\" "
-                    if field_info["Comment"]:
+                    if field_info.get("Comment"):
                         sql += " COMMENT " + "'" + field_info["Comment"] + "'"
+                    if not (field_info.get("Field") or field_info.get("Type")):
+                        return self.error_msg["300"].format("Field和Type必填。")
                     self.cursor.execute(sql)
                     self.conn.commit()
                     success_field_name.append(field_name)
@@ -209,7 +214,7 @@ class Table:
                     # 如果sql语句执行出错，则返回错误信息
                     err_field_name_list.append((field_name, e))
         self.clean_file()
-        return self.error_msg['0'].format("新增以下字段成功:{},\n以下字段操作失败:{}.\n"
+        return self.error_msg['0'].format("\n新增以下字段成功:{},\n以下字段操作失败:{}.\n"
                                           .format(success_field_name, err_field_name_list))
 
     def del_field(self):
@@ -235,7 +240,3 @@ class Table:
             self.clean_file()
         return self.error_msg['0'].format("\n删除以下字段:{},\n以下字段删除失败:{},\n以下字段未找到:{}。\n"
                                         .format(success_field_name, err_field_name_list, miss_fields_name_list))
-
-
-
-            # ALTER TABLE teaching_train DROP new_field;
