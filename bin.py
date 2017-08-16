@@ -4,30 +4,29 @@ from model import Table
 from config import *
 
 
-def handle(args):
+def handle(pars):
     environments = {
         'dev': DB_DEV,
         'test': DB_TEST,
-        'conf': DB_CONFIG
+        'conf': DB_CONFIG,
     }
 
-    op = args.operate
-    env = environments[args.environment]
-    table_name = args.table
-    env.update({"table_name": table_name})
+    op = pars.operate
+    env = environments[pars.environment]
+    tables_name = pars.tables.split(",")
+    env.update({"tables_name": tables_name})
     table = Table(**env)
 
     ops = {
         'write': table.write_table_fields,
-        'change_field_name': table.change_field_name,
-        'change_table_name': table.change_table_name,
-        'add_field': table.add_field,
-        'del_field': table.del_field
+        'change_field_name': table.batch_op,
+        'change_table_name': table.batch_op,
+        'add_field': table.batch_op,
+        'del_field': table.batch_op,
     }
 
-    ret = ops[op]()
+    ret = ops[op](op)
     print(ret)
-
 
 if __name__ == '__main__':
     parser = ArgumentParser()
