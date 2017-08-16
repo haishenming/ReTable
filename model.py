@@ -7,6 +7,8 @@ import json
 import pymysql
 from pymysql.err import ProgrammingError
 
+from config import *
+
 
 class Table:
     def __init__(self, host, user, password, tables_name,

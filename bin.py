@@ -34,7 +34,7 @@ if __name__ == '__main__':
                         choices=['write', 'change_field_name', 'change_table_name', 'add_field', 'del_field'],
                         help='写入/修改字段/修改表名/添加字段')
     parser.add_argument('-e', '--environment', default='conf', help='数据库环境')
-    parser.add_argument('-t', '--table', default='', help='要操作的表名')
+    parser.add_argument('-t', '--tables', default='', help='要操作的表名')
 
     args = parser.parse_args()
     handle(args)

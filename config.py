@@ -1,3 +1,5 @@
+import os
+
 # 数据库配置
 DB_CONFIG = {
     'host': '101.201.68.4',  # 数据库地址
@@ -16,3 +18,7 @@ DB_DEV = {
 DB_TEST = {
 
 }
+
+
+BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+TABLE_INFO_FILE = os.path.join(BASE_DIR, "table_info.json")
