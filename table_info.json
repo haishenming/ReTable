@@ -1,346 +1,325 @@
 {
-    "teaching_train": {
+    "user": {
         "table_field": {
-            "name": {
-                "Comment": "名称",
-                "Default": "leo",
-                "Type": "varchar(40)",
-                "Field": "name",
-                "Null": "NO"
-            },
-            "point_videos": {
-                "Comment": "要点视频",
+            "group_id": {
+                "Field": "group_id",
                 "Default": null,
-                "Type": "text",
-                "Field": "point_videos",
-                "Null": "YES"
-            },
-            "train_id": {
-                "Comment": "练习id",
-                "Default": "0",
+                "Null": "YES",
                 "Type": "int(11)",
-                "Field": "train_id",
-                "Null": "NO"
+                "Comment": "权限组ID"
             },
-            "level": {
-                "Comment": "fdssds",
-                "Default": "2",
-                "Type": "int(1)",
-                "Field": "level",
-                "Null": "YES"
-            },
-            "difficulty": {
-                "Comment": "课程难度",
-                "Default": "",
-                "Type": "varchar(50)",
-                "Field": "difficulty",
-                "Null": "YES"
-            },
-            "index": {
-                "Comment": "显示顺序，从小到大sssdfsd",
-                "Default": "0",
-                "Type": "int(11)",
-                "Field": "index",
-                "Null": "NO"
-            },
-            "type": {
-                "Comment": "练习类型，0气息，1音准，2技巧",
-                "Default": "0",
-                "Type": "int(11)",
-                "Field": "type",
-                "Null": "NO"
-            },
-            "parameters": {
-                "Comment": "练习参数",
+            "forbidden": {
+                "Field": "forbidden",
                 "Default": null,
-                "Type": "text",
-                "Field": "parameters",
-                "Null": "YES"
-            },
-            "resource": {
-                "Comment": "需要下载资源的总大小",
-                "Default": "0",
-                "Type": "int(11)",
-                "Field": "resource",
-                "Null": "YES"
-            },
-            "prologue": {
-                "Comment": "1234",
-                "Default": null,
-                "Type": "varchar(40)",
-                "Field": "prologue",
-                "Null": "YES"
-            },
-            "tag": {
-                "Comment": "练习标签: json格式  [string, string]",
-                "Default": "[]",
-                "Type": "varchar(100)",
-                "Field": "tag",
-                "Null": "YES"
-            },
-            "prologuesssssssssssss": {
-                "Comment": "开场白视频文件",
-                "Default": null,
-                "Type": "varchar(40)",
-                "Field": "prologuesssssssssssss",
-                "Null": "NO"
-            },
-            "step": {
-                "Comment": "练习步骤",
-                "Default": null,
-                "Type": "text",
-                "Field": "step",
-                "Null": "YES"
-            },
-            "updated": {
-                "Comment": "修改时间",
-                "Default": null,
+                "Null": "YES",
                 "Type": "datetime",
-                "Field": "updated",
-                "Null": "YES"
-            },
-            "new_field_nn": {
-                "Comment": "新添加的字段",
-                "Default": "1",
-                "Type": "int(20)",
-                "Field": "new_field_nn",
-                "Null": "NO"
-            },
-            "target": {
-                "Comment": "课程目的",
-                "Default": "1234567890",
-                "Type": "varchar(200)",
-                "Field": "target",
-                "Null": "NO"
-            },
-            "created123": {
-                "Comment": "创建时间",
-                "Default": null,
-                "Type": "datetime",
-                "Field": "created123",
-                "Null": "NO"
-            },
-            "applicable": {
-                "Comment": "dsaf",
-                "Default": null,
-                "Type": "varchar(200)",
-                "Field": "applicable",
-                "Null": "YES"
-            },
-            "sdddd": {
-                "Comment": "课程状态",
-                "Default": "0",
-                "Type": "tinyint(4)",
-                "Field": "sdddd",
-                "Null": "NO"
-            },
-            "strength": {
-                "Comment": "练习强度",
-                "Default": null,
-                "Type": "varchar(50)",
-                "Field": "strength",
-                "Null": "YES"
-            },
-            "is_sync": {
-                "Comment": "是否已提交（同步到其他环境），0：未提交 1：已提交",
-                "Default": "0",
-                "Type": "int(1)",
-                "Field": "is_sync",
-                "Null": "YES"
-            },
-            "resource_counts": {
-                "Comment": "需要下载资源数量，只算音频和视频",
-                "Default": "0",
-                "Type": "int(11)",
-                "Field": "resource_counts",
-                "Null": "NO"
+                "Comment": "被禁用的时间"
             },
             "deleted": {
-                "Comment": "删除时间",
-                "Default": null,
-                "Type": "datetime",
                 "Field": "deleted",
-                "Null": "YES"
-            },
-            "HSM": {
-                "Comment": "修改人ID",
-                "Default": "0",
-                "Type": "int(11)",
-                "Field": "HSM",
-                "Null": "YES"
-            },
-            "correlation": {
-                "Comment": "",
-                "Default": "[]",
-                "Type": "varchar(30)",
-                "Field": "correlation",
-                "Null": "YES"
+                "Default": null,
+                "Null": "YES",
+                "Type": "datetime",
+                "Comment": "被删除的时间"
             },
             "user_id": {
-                "Comment": "创建人ID",
-                "Default": "0",
-                "Type": "int(11)",
                 "Field": "user_id",
-                "Null": "NO"
+                "Default": null,
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": ""
             },
-            "prologue_audio": {
-                "Comment": "开场白音频文件",
-                "Default": "NO",
-                "Type": "varchar(40)",
-                "Field": "prologue_audio",
-                "Null": "YES"
+            "salt": {
+                "Field": "salt",
+                "Default": null,
+                "Null": "YES",
+                "Type": "varchar(32)",
+                "Comment": ""
+            },
+            "update_time": {
+                "Field": "update_time",
+                "Default": null,
+                "Null": "YES",
+                "Type": "datetime",
+                "Comment": "修改时间"
+            },
+            "password": {
+                "Field": "password",
+                "Default": null,
+                "Null": "YES",
+                "Type": "varchar(32)",
+                "Comment": ""
+            },
+            "email": {
+                "Field": "email",
+                "Default": null,
+                "Null": "NO",
+                "Type": "varchar(50)",
+                "Comment": ""
+            },
+            "create_user_id": {
+                "Field": "create_user_id",
+                "Default": null,
+                "Null": "YES",
+                "Type": "int(11)",
+                "Comment": "创建人ID"
+            },
+            "login_time": {
+                "Field": "login_time",
+                "Default": null,
+                "Null": "YES",
+                "Type": "datetime",
+                "Comment": "最后登录时间"
+            },
+            "is_superuser": {
+                "Field": "is_superuser",
+                "Default": null,
+                "Null": "NO",
+                "Type": "tinyint(1)",
+                "Comment": "是否超级用户"
+            },
+            "update_user_id": {
+                "Field": "update_user_id",
+                "Default": null,
+                "Null": "YES",
+                "Type": "int(11)",
+                "Comment": "修改人ID"
+            },
+            "createtime": {
+                "Field": "createtime",
+                "Default": null,
+                "Null": "NO",
+                "Type": "datetime",
+                "Comment": "创建时间"
             }
         },
-        "table_name": "teaching_train"
+        "table_name": "user"
     },
     "settings": {
         "table_field": {
-            "created": {
-                "Comment": "创建时间",
-                "Default": null,
-                "Type": "datetime",
-                "Field": "created",
-                "Null": "NO"
-            },
             "user_id": {
-                "Comment": "创建人",
-                "Default": null,
-                "Type": "int(11)",
                 "Field": "user_id",
-                "Null": "NO"
-            },
-            "value": {
-                "Comment": "设置值",
                 "Default": null,
-                "Type": "text",
-                "Field": "value",
-                "Null": "NO"
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "创建人"
+            },
+            "created": {
+                "Field": "created",
+                "Default": null,
+                "Null": "NO",
+                "Type": "datetime",
+                "Comment": "创建时间"
             },
             "key": {
-                "Comment": "设置键值",
-                "Default": null,
-                "Type": "varchar(30)",
                 "Field": "key",
-                "Null": "NO"
+                "Default": null,
+                "Null": "NO",
+                "Type": "varchar(30)",
+                "Comment": "设置键值"
+            },
+            "value": {
+                "Field": "value",
+                "Default": null,
+                "Null": "NO",
+                "Type": "text",
+                "Comment": "设置值"
             }
         },
         "table_name": "settings"
     },
-    "user": {
+    "teaching_trains": {
         "table_field": {
-            "createtime": {
-                "Comment": "创建时间",
-                "Default": null,
-                "Type": "datetime",
-                "Field": "createtime",
-                "Null": "NO"
-            },
-            "is_superuser": {
-                "Comment": "是否超级用户",
-                "Default": null,
-                "Type": "tinyint(1)",
-                "Field": "is_superuser",
-                "Null": "NO"
-            },
-            "password": {
-                "Comment": "",
-                "Default": null,
-                "Type": "varchar(32)",
-                "Field": "password",
-                "Null": "YES"
-            },
-            "hai": {
-                "Comment": "",
-                "Default": null,
-                "Type": "varchar(32)",
-                "Field": "hai",
-                "Null": "YES"
-            },
-            "update_user_id": {
-                "Comment": "修改人ID",
-                "Default": null,
+            "resource_size": {
+                "Field": "resource_size",
+                "Default": "0",
+                "Null": "NO",
                 "Type": "int(11)",
-                "Field": "update_user_id",
-                "Null": "YES"
+                "Comment": "需要下载资源的总大小"
             },
-            "new_time": {
-                "Comment": "修改时间",
-                "Default": null,
-                "Type": "datetime",
-                "Field": "new_time",
-                "Null": "YES"
-            },
-            "email-miniinid": {
-                "Comment": "",
+            "prologue_audio": {
+                "Field": "prologue_audio",
                 "Default": "",
+                "Null": "YES",
+                "Type": "varchar(40)",
+                "Comment": "开场白音频文件"
+            },
+            "duration": {
+                "Field": "duration",
+                "Default": "",
+                "Null": "YES",
                 "Type": "varchar(50)",
-                "Field": "email-miniinid",
-                "Null": "NO"
-            },
-            "salt": {
-                "Comment": "",
-                "Default": null,
-                "Type": "varchar(32)",
-                "Field": "salt",
-                "Null": "YES"
-            },
-            "new_int_field": {
-                "Comment": "",
-                "Default": null,
-                "Type": "int(20)",
-                "Field": "new_int_field",
-                "Null": "YES"
-            },
-            "group_id": {
-                "Comment": "权限组ID",
-                "Default": null,
-                "Type": "int(11)",
-                "Field": "group_id",
-                "Null": "YES"
-            },
-            "create_user_id": {
-                "Comment": "创建人ID",
-                "Default": null,
-                "Type": "int(11)",
-                "Field": "create_user_id",
-                "Null": "YES"
-            },
-            "best": {
-                "Comment": "ABC",
-                "Default": "aaa",
-                "Type": "varchar(20)",
-                "Field": "best",
-                "Null": "YES"
-            },
-            "new_field": {
-                "Comment": "",
-                "Default": null,
-                "Type": "varchar(20)",
-                "Field": "new_field",
-                "Null": "YES"
+                "Comment": "建议学习周期"
             },
             "user_id": {
-                "Comment": "",
-                "Default": null,
-                "Type": "int(11)",
                 "Field": "user_id",
-                "Null": "NO"
-            },
-            "tttt": {
-                "Comment": "被删除的时间",
                 "Default": null,
-                "Type": "datetime",
-                "Field": "tttt",
-                "Null": "YES"
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "创建人ID"
             },
-            "forbidden": {
-                "Comment": "被禁用的时间",
+            "name": {
+                "Field": "name",
+                "Default": "",
+                "Null": "NO",
+                "Type": "varchar(40)",
+                "Comment": "名称"
+            },
+            "tag": {
+                "Field": "tag",
+                "Default": "[]",
+                "Null": "YES",
+                "Type": "varchar(100)",
+                "Comment": "练习标签: json格式  [string, string]"
+            },
+            "prologue_picture": {
+                "Field": "prologue_picture",
+                "Default": "",
+                "Null": "YES",
+                "Type": "varchar(40)",
+                "Comment": "开场白配图"
+            },
+            "target": {
+                "Field": "target",
+                "Default": "",
+                "Null": "NO",
+                "Type": "varchar(200)",
+                "Comment": "目的"
+            },
+            "resource_count": {
+                "Field": "resource_count",
+                "Default": "0",
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "需要下载资源数量，只算音频和视频"
+            },
+            "parameters": {
+                "Field": "parameters",
                 "Default": null,
+                "Null": "YES",
+                "Type": "text",
+                "Comment": "课程参数"
+            },
+            "train_id": {
+                "Field": "train_id",
+                "Default": null,
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "id"
+            },
+            "type": {
+                "Field": "type",
+                "Default": "0",
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "类型，0气息，1音准，2技巧"
+            },
+            "update_user_id": {
+                "Field": "update_user_id",
+                "Default": null,
+                "Null": "YES",
+                "Type": "int(11)",
+                "Comment": "修改人ID"
+            },
+            "difficulty": {
+                "Field": "difficulty",
+                "Default": "",
+                "Null": "YES",
+                "Type": "varchar(50)",
+                "Comment": "难度"
+            },
+            "applicable": {
+                "Field": "applicable",
+                "Default": "",
+                "Null": "YES",
+                "Type": "varchar(100)",
+                "Comment": "适用人群"
+            },
+            "prologue_video": {
+                "Field": "prologue_video",
+                "Default": "",
+                "Null": "NO",
+                "Type": "varchar(40)",
+                "Comment": "开场白视频文件"
+            },
+            "correlation_lesson": {
+                "Field": "correlation_lesson",
+                "Default": "[]",
+                "Null": "YES",
+                "Type": "varchar(40)",
+                "Comment": ""
+            },
+            "deleted": {
+                "Field": "deleted",
+                "Default": null,
+                "Null": "YES",
                 "Type": "datetime",
-                "Field": "forbidden",
-                "Null": "YES"
+                "Comment": "删除时间"
+            },
+            "status": {
+                "Field": "status",
+                "Default": "0",
+                "Null": "NO",
+                "Type": "tinyint(4)",
+                "Comment": "状态，0在库，1上线，2审核，3删除"
+            },
+            "index": {
+                "Field": "index",
+                "Default": "0",
+                "Null": "NO",
+                "Type": "int(11)",
+                "Comment": "显示顺序，从小到大"
+            },
+            "level": {
+                "Field": "level",
+                "Default": "0",
+                "Null": "YES",
+                "Type": "int(1)",
+                "Comment": "难度等级（标签） 0:入门， 1:进阶 2:高阶"
+            },
+            "step": {
+                "Field": "step",
+                "Default": null,
+                "Null": "YES",
+                "Type": "text",
+                "Comment": "步骤"
+            },
+            "updated": {
+                "Field": "updated",
+                "Default": null,
+                "Null": "YES",
+                "Type": "datetime",
+                "Comment": "修改时间"
+            },
+            "point_video": {
+                "Field": "point_video",
+                "Default": null,
+                "Null": "YES",
+                "Type": "text",
+                "Comment": "要点视频"
+            },
+            "created": {
+                "Field": "created",
+                "Default": null,
+                "Null": "NO",
+                "Type": "datetime",
+                "Comment": "创建时间"
+            },
+            "strength": {
+                "Field": "strength",
+                "Default": "",
+                "Null": "YES",
+                "Type": "varchar(50)",
+                "Comment": "强度"
+            },
+            "is_sync": {
+                "Field": "is_sync",
+                "Default": "0",
+                "Null": "YES",
+                "Type": "int(1)",
+                "Comment": "是否已提交（同步到其他环境），0：未提交 1：已提交"
             }
         },
-        "table_name": "user"
+        "table_name": "teaching_trains"
     }
 }
