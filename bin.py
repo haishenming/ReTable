@@ -11,6 +11,7 @@ def handle(pars):
         env = getattr(envs, pars.environment)
     else:
         print("环境未配置！")
+
         # 退出程序
         raise SystemExit
 
