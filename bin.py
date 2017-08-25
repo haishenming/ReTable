@@ -10,8 +10,9 @@ def handle(pars):
     if hasattr(envs, pars.environment):
         env = getattr(envs, pars.environment)
     else:
-        env = {}
         print("环境未配置！")
+        # 退出程序
+        raise SystemExit
 
     op = pars.operate
     tables_name = pars.tables.split(",")
