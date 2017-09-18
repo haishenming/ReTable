@@ -341,7 +341,7 @@ if __name__ == '__main__':
                         choices=['write', 'change_field_name',
                                  'change_table_name', 'add_field',
                                  'del_field'],
-                        help='写入/修改字段/修改表名/添加字段/删除字段\n')
+                        help='写入JSON文件/修改字段/修改表名/添加字段/删除字段\n')
     parser.add_argument('-e', '--environment',
                         default='xiang',
                         help='数据库环境')
